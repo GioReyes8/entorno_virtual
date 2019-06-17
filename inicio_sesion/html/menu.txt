@@ -1,0 +1,110 @@
+﻿<nav class="navegacion" id="nav">
+      <ul class="menu">
+
+        <li><a href="">PORTALES</a>
+          <ul class="submenu">
+            <li><a href="">RESIDENCIAS PROFESIONALES</a></li>
+            <li><a href="">SISTEMA DE EGRESADOS</a></li>
+          </ul>
+        </li>
+        <li><a href="">LINEAS DE INVESTIGACIÓN</a></li>
+        <li><a href="">BANCO DE PROYECTOS</a></li>
+        <li><a href="">JEFATURAS DE VINCULACIÓN</a></li>
+        <li><a href="">CUERPO ACADÉMICO</a>
+          <ul class="submenu">
+            <li><a href="">DOCENTES DEL DEPTARTAMENTO</a></li>
+            <li><a href="">PERFILES DESEABLES</a></li>
+          </ul>
+        </li>
+        <li><a href="">ASESORÍAS</a></li>
+      </ul>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+------------------------ estilos ------------------------------
+
+
+
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.navegacion {
+  position: fixed;
+  margin-bottom: 50px;
+  background: #ffffff;
+  border-bottom: #9d9fa4 2px solid;
+  box-shadow: 10px 10px 31px -15px rgba(0, 0, 0, 0.75);
+  top: 0;
+  margin: 0 auto;
+  left: 0px;
+  right: 0px;
+  z-index: 5;
+}
+
+.navegacion ul {
+  list-style: none;
+}
+
+.menu>li {
+  position: relative;
+  display: inline-block;
+}
+
+.menu>li>a {
+  text-align: center;
+  display: block;
+  padding: 15px 13px;
+  color: #595959;
+  font-family: 'Open sans';
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.menu li a:hover {
+  color: #ffffff;
+  background-color: #1b396a;
+  transition: all .1s;
+}
+
+
+.submenu {
+  position: absolute;
+  background-color: #ffffff;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s;
+  box-shadow: 10px 10px 31px -15px rgba(0, 0, 0, 0.75);
+}
+
+.submenu li a {
+  display: block;
+  padding: 14px;
+  color: #595959;
+  font-family: 'Open sans';
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.menu li:hover .submenu {
+  visibility: visible;
+  opacity: 1;
+}

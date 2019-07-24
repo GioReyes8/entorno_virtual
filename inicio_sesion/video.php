@@ -38,37 +38,26 @@
 </head>
 
 
-<header>
-  <!-- Imagenes de encabezado -->
-  <div class="encabezado">
-    <img class="imagen" src="imagenes/ITTLA.jpg" alt="No se puede mostrar la imagen" 
-    title="Logo ITTLA" align="left">
-
-    <img class="imagen" src="imagenes/luna.jpg" alt="No se puede mostrar la imagen" 
-    title="Logo luna" align="center">
-
-    <img class="imagen" src="imagenes/TecN.png" alt="No se puede mostrar la imagen" 
-    title="Logo TecN" align="right">
-  </div>
-</header>
-
-
-
 <body>
+
+
+  <header>
+    <!-- Imagenes de encabezado -->
+    <div class="encabezado">
+      <img class="imagen" src="imagenes/ITTLA.jpg" alt="No se puede mostrar la imagen" title="Logo ITTLA" align="left">
+
+      <img class="imagen" src="imagenes/luna.jpg" alt="No se puede mostrar la imagen" title="Logo luna" align="center">
+
+      <img class="imagen" src="imagenes/TecN.png" alt="No se puede mostrar la imagen" title="Logo TecN" align="right">
+    </div>
+  </header>
+
+
   <!-- Menu de navegacion-->
   <nav class="navegacion" id="nav">
     <ul class="menu">
 
-      <li><a href="">MATERIAS</a>
-        <ul class="submenu">
-          <li><a href="">Calculo diferencial</a></li>
-          <li><a href="">Fundamentos de programación</a></li>
-          <li><a href="">Matemáticas Discretas I</a></li>
-          <li><a href="">Introducción a las TIC’s </a></li>
-          <li><a href="">Taller de Ética</a></li>
-          <li><a href="">Fundamentos de Investigación </a></li>
-        </ul>
-      </li>
+      <li><a href="menu_materias.php">MATERIAS</a></li>
 
       <li><a href="">QUIENES SOMOS</a></li>
 
@@ -77,20 +66,23 @@
           <li><a href="">Facebook</a></li>
           <li><a href="">Twitter</a></li>
           <li><a href="">Whatsapp</a></li>
-          <li><a href="">Correo electronico</a></li>
+          <li><a href="http://www.tlalnepantla.tecnm.mx">Página de la escuela</a></li>
         </ul>
       </li>
 
       <li><a href="">PERFIL</a>
         <ul class="submenu">
-        <li>Estás logeado como "<?= $user['email']; ?>"</li>
           <li><a href="">Informacion</a></li>
-          <li><a href="logout.php">Cerrar sesion</a></li>
+          <li><a href="logout.php">Cerrar sesion <?= $user['email']; ?></a></li>
         </ul>
       </li>
 
     </ul>
   </nav>
+
+  <?php if(!empty($message)): ?>
+  <p> <?= $message ?></p>
+  <?php endif; ?>
 
   <div class="container">
     <h1 class="texto">Entorno Virtual</h1>
@@ -111,23 +103,24 @@
     </div>
   </div>
 
-</body>
 
-<footer class="footer">
-  <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-    Sistema Integral de Información.
-    <br>
-    Copyright © 2019 Instituto Tecnológico de Tlalnepantla.
-    <br>
-    Todos los derechos reservados.
-    <br>
-    Coordinación de Desarrollo de Sistemas - Centro de Cómputo.
-    <br>
-    <div id="browser_info">
-      <span>Estas utilizando Google Chrome.
-        <img src="http://sii.ittla.edu.mx/img/iconos/accept.png" width="15" height="15" alt="Correcto..."></span>
-      <br> </div>
-  </div>
-</footer>
+  <footer class="footer">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      Sistema Integral de Información.
+      <br>
+      Copyright © 2019 Instituto Tecnológico de Tlalnepantla.
+      <br>
+      Todos los derechos reservados.
+      <br>
+      Coordinación de Desarrollo de Sistemas - Centro de Cómputo.
+      <br>
+      <div id="browser_info">
+        <span>Estas utilizando Google Chrome.
+          <img src="imagenes/accept.png" width="15" height="15" alt="Correcto..."></span>
+        <br> </div>
+    </div>
+  </footer>
+
+</body>
 
 </html>

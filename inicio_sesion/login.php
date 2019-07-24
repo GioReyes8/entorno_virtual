@@ -15,7 +15,7 @@
     $message = '';
     if (count($results)> 0 && password_verify($_POST['password'], $results['password'])) {
       $_SESSION['user_id'] = $results['id'];
-      header('Locationn: index.php');
+      header("Location:menu_materias.php");
       $message = 'Acceso satisfactorio';
     } else {
       $message = 'Error, los campos no coinciden';

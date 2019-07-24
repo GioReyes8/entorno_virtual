@@ -9,11 +9,14 @@
     $stmt->bindParam(':password', $password);
     if ($stmt->execute()) {
       $message = 'Nuevo usuario creado correctamente';
+      header("Location:menu_materias.php");
     } else {
       $message = 'Ha habido un problema al crear tu cuenta; intenta de nuevo';
     }
   }
 ?>
+
+
 <!DOCTYPE html>
 <html>
 
